@@ -3,3 +3,21 @@
   --clr-light: #f1f1f1;
   --clr-dark: #333;
 }
+
+body {
+  font-family: "open sans", sans-serif;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-dark);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
