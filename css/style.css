@@ -46,15 +46,76 @@ img {
 .main-nav {
   position: fixed;
   top: 0;
-  left: 0;
-  bottom: 0;
-  background: var(--clr-primary);
+  left: 100px;
+  background: var(--clr-dark);
   width: 10%;
-  border-radius: 0 10px 10px 0;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  height: 50%;
-  padding: 2em;
-  text-align: center;
-  justify-content: space-around;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-hamburger {
+  display: block;
+  background-color: var(--clr-primary);
+  width: 25px;
+  height: 3px;
+  position: relative;
+  color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-hamburger::before,
+.menu-hamburger::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+.menu-hamburger::after {
+  top: 8px;
+}
+
+/* isclicked class */
+.menu-hamburger.is-clicked {
+  background-color: transparent;
+}
+
+.is-clicked span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.is-clicked span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.nav-title {
+  margin: 0;
+  color: var(--clr-primary);
+}
+
+.main-nav-wrap {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+}
+
+.main-nav-wrap > a {
+  display: block;
+  color: #fff;
+  padding: 1em;
 }
