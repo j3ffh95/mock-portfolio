@@ -53,6 +53,10 @@ img {
   color: var(--clr-primary);
 }
 
+.main-nav-wrap > .active {
+  color: var(--clr-primary);
+}
+
 /* Layout */
 .main-header {
   background-image: linear-gradient(
@@ -152,7 +156,7 @@ img {
   left: 0;
   width: 100%;
   background-color: #333;
-  transition: transform 0.5s ease;
+  transition: transform 0.8s ease;
   transform: scaleY(0);
   transform-origin: top;
 }
@@ -165,6 +169,13 @@ img {
   display: block;
   color: #fff;
   padding: 1em;
+  transition: all 0.2s ease-in;
+}
+
+.main-nav-wrap > a:hover,
+.main-nav-wrap > a:focus {
+  color: var(--clr-primary);
+  transform: translateX(15px);
 }
 
 /* Main Header Content */
