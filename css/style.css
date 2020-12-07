@@ -191,3 +191,10 @@ img {
 .btn-main {
   align-self: center;
 }
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  align-self: center;
+}
