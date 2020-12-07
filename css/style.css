@@ -47,18 +47,18 @@ img {
   position: fixed;
   top: 0;
   left: 100px;
-  background: var(--clr-dark);
-  width: 10%;
-  padding: 1em;
+  width: 10rem;
   cursor: pointer;
 }
 
 .menu-toggle {
   position: relative;
   display: flex;
-
   justify-content: space-between;
   align-items: center;
+  background: var(--clr-dark);
+  padding: 1em;
+  z-index: 1;
 }
 
 .menu-hamburger {
@@ -123,11 +123,16 @@ img {
 
 .main-nav-wrap {
   position: absolute;
-  top: 100%;
   left: 0;
   width: 100%;
   background-color: #333;
-  display: none;
+  transition: transform 0.5s ease;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.main-nav-wrap.showNav {
+  transform: scaleY(1);
 }
 
 .main-nav-wrap > a {
