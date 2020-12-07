@@ -43,11 +43,22 @@ img {
   border: 3px solid var(--clr-primary);
 }
 
+.social-icon {
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: var(--clr-primary);
+}
+
+/* Layout */
 .main-header {
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.8)
     ),
     url("https://images.unsplash.com/photo-1437590552276-2e17e82b7b48?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80");
   background-size: cover;
@@ -61,7 +72,7 @@ img {
 .main-nav {
   position: fixed;
   top: 0;
-  left: 100px;
+  left: 10%;
   width: 10rem;
   cursor: pointer;
 }
@@ -71,7 +82,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--clr-dark);
+  background: transparent;
   padding: 1em;
   z-index: 1;
 }
@@ -190,11 +201,12 @@ img {
 
 .btn-main {
   align-self: center;
+  margin-bottom: 5rem;
 }
 
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 10rem;
+  width: 15rem;
   align-self: center;
 }
